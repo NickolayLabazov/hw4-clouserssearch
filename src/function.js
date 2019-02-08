@@ -1,9 +1,7 @@
-export const findBy = (key, value) => {
-  return function (element) {
-    for (const keys in element) {
-      if ((keys === key) && (element[keys] === value)) {
-        return true;
-      }
+export const findBy = (key, value) => function (element) {
+  for (const keys in element) {
+    if (keys === key) {
+      return element[keys] === value;
     }
-  };
-}
+  }
+};

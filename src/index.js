@@ -1,4 +1,4 @@
-import { findBy } from './function.js';
+import findBy from './function';
 
 const finder = findBy('type', 'atack');
 

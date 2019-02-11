@@ -1,4 +1,4 @@
-import { findBy } from '../src/function.js';
+import findBy from '../src/function';
 
 test('Поиск по массиву', () => {
   const finder = findBy('type', 'atack');

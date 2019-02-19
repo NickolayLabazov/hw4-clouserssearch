@@ -1,6 +1,6 @@
 import findBy from '../src/function';
 
-test('Поиск по массиву', () => {
+test('Один результат', () => {
   const finder = findBy('type', 'atack');
 
   const expected = [
@@ -16,7 +16,7 @@ test('Поиск по массиву', () => {
   expect(received).toEqual(expected);
 });
 
-test('Поиск по массиву', () => {
+test('Нет результатов', () => {
   const finder = findBy('type', 'заклинание');
 
   const expected = [];
@@ -30,8 +30,8 @@ test('Поиск по массиву', () => {
   expect(received).toEqual(expected);
 });
 
-test('Поиск по массиву', () => {
-  const finder = findBy('name', 'atack');
+test('Нет результатов', () => {
+  const finder = findBy('name', 'type');
 
   const expected = [];
 
@@ -44,7 +44,7 @@ test('Поиск по массиву', () => {
   expect(received).toEqual(expected);
 });
 
-test('Поиск по массиву', () => {
+test('Два результата', () => {
   const finder = findBy('type', 'atack');
 
   const expected = [
